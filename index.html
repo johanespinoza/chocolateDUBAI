@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descubre el Secreto del Chocolate que ha Revolucionado la Repostería</title>
-    <meta name="description" content="¿Sabías que el 92% de los postres profesionales usan técnicas que desconoces? Descubre cómo transformar tus postres en obras maestras con Chocolate Dubai.">
-    
-    <!-- Facebook Pixel Code -->
+    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -23,7 +18,12 @@
     src="https://www.facebook.com/tr?id=4056075384658960&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>33 Recetas Exclusivas de Chocolate Dubai | ¡Delicias que Sorprenderán!</title>
+    <meta name="description" content="Descubre los secretos del Chocolate Dubai con 33 recetas exclusivas. ¡Transforma tu repostería con estos deliciosos postres fáciles de preparar!">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,549 +32,988 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
     <style>
-        .scroll-hint {
+        :root {
+            --primary: #7B3F00;        /* Rich Chocolate Brown */
+            --primary-hover: #5c3000;  /* Darker Brown */
+            --secondary: #D4AF37;      /* Gold */
+            --dark: #4a2c12;          /* Dark Brown */
+            --light: #fff9f0;         /* Light Beige */
+            --white: #ffffff;
+            --danger: #dc3545;        /* For countdown */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Imagenes/Portada principal.jpeg') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
             text-align: center;
-            margin: 20px 0;
-            animation: bounce 2s infinite;
+            color: white;
+            position: relative;
+            padding: 80px 0;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-15px);}
-            60% {transform: translateY(-7px);}
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.3;
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        /* Countdown */
+        .countdown-bar {
+            background-color: var(--dark);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .countdown-timer {
+            font-weight: 700;
+            color: #ff6b6b;
+            font-size: 1.2rem;
+        }
+        
+        /* Buttons */
+        /* Payment Button Styles */
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white !important;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 10px 5px;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, #218838, #1e7e34);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.6);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 10px rgba(40, 167, 69, 0.4);
+        }
+        
+        /* Sections */
         .section {
             padding: 80px 0;
-            position: relative;
         }
+        
         .section-title {
-            text-align: center;
-            margin-bottom: 50px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             position: relative;
-            color: #4a2c12;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
         }
+        
         .section-title:after {
             content: '';
             display: block;
             width: 80px;
             height: 4px;
-            background: #8b5a2b;
+            background: var(--secondary);
             margin: 15px auto 0;
         }
-        .cta-button {
-            display: inline-block;
-            background: #8b5a2b;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(139, 90, 43, 0.3);
+        
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
         }
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(139, 90, 43, 0.4);
-        }
-        .testimonial-card {
+        
+        .feature {
             background: white;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             margin: 20px 0;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: '"';
+            font-family: Georgia, serif;
+            font-size: 5rem;
+            color: var(--secondary);
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            line-height: 1;
+            opacity: 0.2;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        /* Price Box */
+        .price-box {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .price {
+            font-size: 3.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        /* Bonuses */
+        .bonus {
+            background: #f8f9fa;
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin: 20px 0;
+            text-align: left;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        /* Guarantee */
+        .guarantee {
+            background: #f0f8ff;
+            border: 2px dashed #4a90e2;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 10px 0;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none;
+            max-width: 300px;
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        
+        .notification.show {
+            display: block;
+        }
+        
+        .notification-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .price-box {
+                padding: 20px;
+            }
+            
+            .price {
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Countdown Timer at the top -->
-    <section id="oferta" class="section" style="background: #4a2c12; color: white; text-align: center; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
-        <div class="container">
-            <p style="font-size: 1.2rem; margin: 0 auto 10px; line-height: 1.6; max-width: 800px;">
-                Oferta especial termina en: 
-                <span id="top-hours" style="font-weight: bold; color: #d4af37;">23</span>h 
-                <span id="top-minutes" style="font-weight: bold; color: #d4af37;">59</span>m 
-                <span id="top-seconds" style="font-weight: bold; color: #d4af37;">59</span>s
+    <!-- Countdown Bar -->
+    <div class="countdown-bar" style="padding: 15px 0; background: linear-gradient(135deg, #7B3F00, #5c3000);">
+        <div class="container" style="text-align: center;">
+            <p style="margin: 0; font-size: 1.5rem; font-weight: 600; color: white;">
+                ¡OFERTA POR TIEMPO LIMITADO! TERMINA EN: 
+                <span id="countdown" class="countdown-timer" style="font-size: 2.2rem; font-weight: 800; color: #4caf50; text-shadow: 0 3px 6px rgba(0,0,0,0.5); letter-spacing: 1px;">23:59:59</span>
             </p>
         </div>
-    </section>
-
-    <!-- Hero Section with Emotional Hook -->
-    <header class="header" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('Imagenes/Portada principal.jpeg') no-repeat center center/cover; min-height: 100vh; display: flex; align-items: center; margin-top: -20px;">
-        <div class="container">
-            <div class="header-content" style="text-align: center; color: white; max-width: 800px; margin: 0 auto;">
-                <h1 style="font-size: 2.8rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
-                    ¿Sabes por qué el 92% de los postres caseros nunca alcanzan su máximo potencial?
-                </h1>
-                <h2 style="font-size: 1.5rem; margin-bottom: 30px; font-weight: 300; line-height: 1.4;">
-                    Descubre el secreto mejor guardado de los maestros chocolateros que transformará para siempre cómo preparas y disfrutas del chocolate
-                </h2>
-                <a href="#problema" class="cta-button" style="background: #d4af37; font-size: 1.2rem; padding: 15px 40px;">
-                    QUIERO ACCEDER
+    </div>
+    
+    <!-- Header / Hero Section -->
+    <header class="header">
+        <div class="header-content">
+            <h1>33 Recetas Exclusivas de Chocolate Dubai</h1>
+            <p>Descubre los secretos para crear postres impresionantes que dejarán a todos con la boca abierta</p>
+            <img src="Imagenes/ebook princial 1.jpeg" alt="33 Recetas de Chocolate Dubai" style="max-width: 100%; border-radius: 10px; margin: 20px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            
+            <div style="margin: 40px 0;">
+                <p style="font-size: 1.8rem; margin-bottom: 25px; font-weight: 600;">
+                    <span style="text-decoration: line-through; opacity: 0.7; margin-right: 15px;">$19.99</span>
+                    <span style="font-weight: 800; color: #28a745; font-size: 2.5rem;">$7.99 USD</span>
+                </p>
+                
+                <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="btn" id="main-cta" style="padding: 18px 50px; font-size: 1.3rem; margin: 20px 0; display: inline-block;">
+                    <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i> QUIERO ACCEDER AHORA
                 </a>
-                <div class="scroll-hint" style="margin-top: 50px;">
-                    <p style="margin-bottom: 10px;">Sigue bajando para descubrir más</p>
-                    <i class="fas fa-chevron-down" style="font-size: 24px;"></i>
+                <p style="font-size: 1rem; margin: 20px 0 0; color: rgba(255,255,255,0.9);">
+                    <i class="fas fa-lock" style="margin-right: 5px;"></i> Pago 100% seguro procesado por Hotmart
+                    <br>
+                    <i class="fas fa-shield-alt" style="margin: 10px 5px 0 0;"></i> Garantía de satisfacción de 7 días
+                </p>
+                
+                <div style="margin-top: 30px; display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; align-items: center;">
+                    <img src="https://hotmart.s3.amazonaws.com/images_pay_forms/logo-hotmart-escuro.png" alt="Hotmart" style="height: 30px; opacity: 0.8;">
+                    <img src="https://hotmart.s3.amazonaws.com/images_pay_forms/payment-methods.png" alt="Métodos de pago" style="height: 30px; opacity: 0.8;">
+                </div>
+            </div>
+            
+            <!-- Benefits with Icons -->
+            <div style="background: rgba(255,255,255,0.1); border-radius: 15px; padding: 30px; margin: 40px 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <div style="background: var(--secondary); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-star" style="color: #fff; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #fff;">Recetas Exclusivas</h3>
+                            <p style="margin: 0; color: rgba(255,255,255,0.9);">33 recetas únicas con Chocolate Dubai, probadas y perfeccionadas para resultados increíbles.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <div style="background: var(--secondary); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-utensils" style="color: #fff; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #fff;">Fácil de Seguir</h3>
+                            <p style="margin: 0; color: rgba(255,255,255,0.9);">Instrucciones paso a paso con fotos detalladas para cada receta.</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 15px;">
+                        <div style="background: var(--secondary); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                            <i class="fas fa-award" style="color: #fff; font-size: 1.2rem;"></i>
+                        </div>
+                        <div>
+                            <h3 style="margin: 0 0 10px 0; color: #fff;">Resultados Garantizados</h3>
+                            <p style="margin: 0; color: rgba(255,255,255,0.9);">Técnicas profesionales para postres que impresionarán a todos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ebook Preview with COLASH Images -->
+            <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 40px 0;">
+                <div style="padding: 30px; text-align: center; background: linear-gradient(135deg, #7B3F00, #5c3000);">
+                    <h2 style="color: #fff; margin: 0 0 20px 0; font-size: 2rem;">Mira el Interior del Ebook</h2>
+                    <p style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto 30px;">
+                        Echa un vistazo a algunas de las increíbles recetas que encontrarás en esta guía exclusiva
+                    </p>
+                </div>
+                
+                <div id="ebook-preview" style="padding: 0; margin: 0 auto; max-width: 1200px;">
+                    <div style="display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: auto; gap: 10px; padding: 15px;">
+                        <!-- Main image taking 2/3 width -->
+                        <div style="grid-column: span 8; grid-row: span 2; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <img src="Imagenes/COLASH 1.png" alt="Receta 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; padding: 20px 20px 15px;">
+                                <h3 style="margin: 0; font-size: 1.5rem;">Recetas Principales</h3>
+                                <p style="margin: 5px 0 0; font-size: 1rem; opacity: 0.9;">Sección 1</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Secondary images -->
+                        <div style="grid-column: span 4; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <img src="Imagenes/COLASH 2.png" alt="Receta 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; padding: 15px 15px 10px;">
+                                <h4 style="margin: 0; font-size: 1.1rem;">Tartas Elegantes</h4>
+                                <p style="margin: 3px 0 0; font-size: 0.9rem; opacity: 0.9;">Sección 2</p>
+                            </div>
+                        </div>
+                        
+                        <div style="grid-column: span 4; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <img src="Imagenes/COLASH 3.png" alt="Receta 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; padding: 15px 15px 10px;">
+                                <h4 style="margin: 0; font-size: 1.1rem;">Postres Creativos</h4>
+                                <p style="margin: 3px 0 0; font-size: 0.9rem; opacity: 0.9;">Sección 3</p>
+                            </div>
+                        </div>
+                        
+                        <div style="grid-column: span 6; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <img src="Imagenes/COLASH 4.png" alt="Receta 4" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; padding: 15px 15px 10px;">
+                                <h4 style="margin: 0; font-size: 1.1rem;">Delicias Chocolatosas</h4>
+                                <p style="margin: 3px 0 0; font-size: 0.9rem; opacity: 0.9;">Sección 4</p>
+                            </div>
+                        </div>
+                        
+                        <div style="grid-column: span 6; position: relative; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <img src="Imagenes/COLASH 5.png" alt="Receta 5" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; padding: 15px 15px 10px;">
+                                <h4 style="margin: 0; font-size: 1.1rem;">Especiales de Temporada</h4>
+                                <p style="margin: 3px 0 0; font-size: 0.9rem; opacity: 0.9;">Sección 5</p>
+                            </div>
+                        </div>
+                </div>
+                    
+                    <style>
+                        /* Hover effects for the collage */
+                        #ebook-preview img {
+                            transition: transform 0.3s ease;
+                        }
+                        
+                        #ebook-preview > div:hover img {
+                            transform: scale(1.05);
+                        }
+                        
+                        /* Responsive adjustments for the grid */
+                        @media (max-width: 900px) {
+                            #ebook-preview > div {
+                                grid-template-columns: repeat(2, 1fr);
+                            }
+                        }
+                        
+                        @media (max-width: 600px) {
+                                grid-template-columns: 1fr;
+                            }
+                             #ebook-preview > div > div {
+                            height: 180px !important;
+                        }
+                        
+                        #ebook-preview > div > div:first-child {
+                            height: 250px !important;
+                        }   
+                        }
+                        
+                        @media (max-width: 768px) {
+                            #ebook-preview {
+                                grid-template-columns: 1fr;
+                            }
+                            
+                            #ebook-preview > div {
+                                height: 250px !important;
+                            }
+                            
+                            .collage-container img {
+                                height: 200px;
+                            }
+                        }
+                        
+                        @media (max-width: 480px) {
+                            .collage-container {
+                                grid-template-areas: 
+                                    'main'
+                                    'col1'
+                                    'col2'
+                                    'col3'
+                                    'col4' !important;
+                                grid-template-columns: 1fr;
+                            }
+                        }
+                    </style>
+                
+                <div style="padding: 40px 30px; text-align: center; background: linear-gradient(135deg, #f9f9f9, #f0f0f0); border-top: 1px solid #eee;">
+                    <h3 style="margin: 0 0 20px 0; color: var(--primary);">¡Y mucho más en el interior!</h3>
+                    <p style="margin: 0 0 20px 0; color: #666;">
+                        Estas son solo 4 de las 33 recetas exclusivas que encontrarás en este completo ebook.
+                    </p>
+                    <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="btn" style="font-size: 1.2rem; padding: 15px 45px; margin: 20px 0 10px; display: inline-block; background: linear-gradient(135deg, #28a745, #218838);">
+                    <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i> QUIERO ACCEDER AHORA
+                </a>
                 </div>
             </div>
         </div>
     </header>
-
-    <!-- The Problem Section -->
-    <section id="problema" class="section" style="background: #fff9f0;">
+    
+    <!-- Order Bump -->
+    <section class="section" style="background-color: #f9f9f9;">
         <div class="container">
-            <h2 class="section-title">El Problema que Nadie Te Cuenta</h2>
             <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 30px;">
-                    ¿Alguna vez has preparado un postre con chocolate que no quedó como esperabas? No estás solo. La mayoría de las recetas caseras fallan porque:
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 40px 0;">
-                    <div class="problem-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                        <div style="font-size: 2.5rem; color: #8b5a2b; margin-bottom: 15px;">
-                            <i class="fas fa-exclamation-triangle"></i>
-                        </div>
-                        <h3 style="color: #4a2c12; margin-bottom: 15px;">Técnicas Desactualizadas</h3>
-                        <p>Usan métodos anticuados que los chefs profesionales ya no utilizan.</p>
+                <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">
+                    Agrega a tu compra si deseas el ebook:
+                </h3>
+                <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <div style="flex: 1; min-width: 200px;">
+                        <img src="Imagenes/order bumps.png" alt="Cómo empaquetar productos de chocolate" style="max-width: 100%; border-radius: 5px;">
                     </div>
-                    <div class="problem-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                        <div style="font-size: 2.5rem; color: #8b5a2b; margin-bottom: 15px;">
-                            <i class="fas fa-question-circle"></i>
-                        </div>
-                        <h3 style="color: #4a2c12; margin-bottom: 15px;">Instrucciones Incompletas</h3>
-                        <p>Dejan fuera pasos cruciales que marcan la diferencia.</p>
+                    <div style="flex: 2; text-align: left;">
+                        <h4 style="margin: 0 0 10px 0; color: var(--dark);">Cómo empaquetar productos de chocolate para que parezcan premium</h4>
+                        <p style="margin-bottom: 15px;">Aprende los secretos para presentar tus creaciones como un profesional y aumentar su valor percibido.</p>
+                        <p style="font-weight: 600; color: var(--primary);">
+                            <span style="text-decoration: line-through; opacity: 0.7; margin-right: 10px;">$9.99</span>
+                            <span style="font-size: 1.3rem;">$4.99</span>
+                        </p>
                     </div>
-                    <div class="problem-card" style="background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
-                        <div style="font-size: 2.5rem; color: #8b5a2b; margin-bottom: 15px;">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 style="color: #4a2c12; margin-bottom: 15px;">Resultados Inconsistentes</h3>
-                        <p>Lo que funciona una vez, falla la siguiente.</p>
-                    </div>
-                </div>
-                <p style="font-style: italic; font-size: 1.1rem; margin-top: 30px;">
-                    "Si sigues haciendo lo mismo, seguirás obteniendo los mismos resultados decepcionantes..."
-                </p>
-                <a href="#solucion" class="cta-button" style="margin-top: 30px;">
-                    QUIERO LA SOLUCIÓN
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Solution Section -->
-    <section id="solucion" class="section" style="background: #f5f5f5;">
-        <div class="container">
-            <h2 class="section-title">La Solución que Cambiará tu Vida Dulce</h2>
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 50px; margin-top: 50px;">
-                <div style="flex: 1; min-width: 300px;">
-                    <img src="Imagenes/ebook princial 1.jpeg" alt="Ebook de recetas con Chocolate Dubai" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-                </div>
-                <div style="flex: 1; min-width: 300px;">
-                    <h3 style="font-size: 1.8rem; color: #4a2c12; margin-bottom: 20px;">
-                        Presentando: <span style="color: #8b5a2b;">33 Recetas Exclusivas con Chocolate Dubai</span>
-                    </h3>
-                    <p style="line-height: 1.8; margin-bottom: 20px;">
-                        Después de años de investigación y pruebas, hemos creado la guía definitiva que te llevará de principiante a experto en la repostería con chocolate. No importa si nunca has horneado antes o si ya tienes experiencia, este método te sorprenderá.
-                    </p>
-                    <ul style="list-style-type: none; padding: 0; margin: 30px 0;">
-                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                            <i class="fas fa-check-circle" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                            <strong>Técnicas profesionales</strong> explicadas paso a paso
-                        </li>
-                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                            <i class="fas fa-check-circle" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                            <strong>Ingredientes accesibles</strong> que encuentras en cualquier tienda
-                        </li>
-                        <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
-                            <i class="fas fa-check-circle" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                            <strong>Resultados consistentes</strong> en cada preparación
-                        </li>
-                    </ul>
-                    <a href="#testimonios" class="cta-button" style="background: transparent; border: 2px solid #8b5a2b; color: #8b5a2b;">
-                        VER TESTIMONIOS
-                    </a>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Social Proof Section -->
-    <section id="testimonios" class="section" style="background: #fff9f0;">
-        <div class="container">
-            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="testimonial-card">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 60px; height: 60px; border-radius: 50%; background: #f0e0c0; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 24px; color: #8b5a2b;">
-                            AM
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; color: #4a2c12;">Ana M.</h4>
-                            <div style="color: #d4af37;">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; line-height: 1.6;">
-                        "¡Increíble! Las recetas son fáciles de seguir y los resultados son espectaculares. Mi familia está encantada con los postres. Ya no compro postres en la pastelería porque los míos quedan igual o mejores."
-                    </p>
-                </div>
-                
-                <div class="testimonial-card" style="margin-top: 30px;">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 60px; height: 60px; border-radius: 50%; background: #f0e0c0; display: flex; align-items: center; justify-content: center; margin-right: 15px; font-size: 24px; color: #8b5a2b;">
-                            CP
-                        </div>
-                        <div>
-                            <h4 style="margin: 0; color: #4a2c12;">Carlos P.</h4>
-                            <div style="color: #d4af37;">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p style="font-style: italic; line-height: 1.6;">
-                        "Empecé mi negocio de postres con estas recetas y los clientes no pueden creer que sean caseros. Las técnicas de empaque premium incluídas me ayudaron a cobrar el doble por mis postres. ¡La mejor inversión que pude hacer!"
-                    </p>
-                </div>
-                
-                <div style="text-align: center; margin-top: 50px;">
-                    <a href="#oferta" class="cta-button" style="font-size: 1.2rem; padding: 15px 40px;">
-                        QUIERO MI COPIA AHORA
-                    </a>
-                    <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">
-                        <i class="fas fa-lock"></i> Pago 100% seguro | Garantía de satisfacción
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Offer Section -->
-    <section id="oferta" class="section" style="background: #4a2c12; color: white; text-align: center; padding: 60px 0;">
-        <div class="container">
-            <h2 style="font-size: 2rem; margin-bottom: 15px;">¡Oferta Especial por Tiempo Limitado!</h2>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; line-height: 1.6;">
-                Por ser uno de nuestros primeros visitantes, tienes acceso a un descuento exclusivo que desaparecerá pronto.
-            </p>
-            <div style="max-width: 600px; margin: 40px auto; background: white; border-radius: 10px; padding: 30px; color: #333;">
-                <h3 style="color: #8b5a2b; font-size: 1.8rem; margin-bottom: 20px;">Tu Inversión Hoy</h3>
-                <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin: 30px 0;">
-                    <div style="text-decoration: line-through; font-size: 1.5rem; color: #999;">$19.99</div>
-                    <div style="font-size: 2.5rem; font-weight: bold; color: #8b5a2b;">$7.99</div>
-                    <div style="background: #ffd700; color: #8b5a2b; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 1.1rem;">
-                        ¡60% DE DESCUENTO!
-                    </div>
-                </div>
-                <p style="font-size: 1.1rem; margin: 20px 0 30px;">
-                    Incluye los bonos gratuitos por ser uno de nuestros primeros clientes:
-                </p>
-                <ul style="text-align: left; max-width: 400px; margin: 0 auto 30px;">
-                    <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                        Guía de Conservación de Chocolate (Valor $9.99)
-                    </li>
-                    <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
-                        <i class="fas fa-check" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                        Recetario de Postres Sin Horno (Valor $9.99)
-                    </li>
-                </ul>
-                <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="cta-button" style="display: block; width: 100%; max-width: 400px; margin: 0 auto 15px; font-size: 1.2rem; padding: 15px; background: #d4af37; border: none;">
-                    QUIERO MI ACCESO INMEDIATO
-                </a>
-                <p style="font-size: 0.9rem; color: #666;">
-                    <i class="fas fa-lock"></i> Pago 100% seguro | Acceso inmediato | Garantía de satisfacción
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="section" style="background: #f9f9f9;">
-        <div class="container">
-            <h2 class="section-title">Tu Transformación en 3 Pasos Sencillos</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
-                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: #8b5a2b;"></div>
-                    <div style="font-size: 3rem; color: #8b5a2b; margin-bottom: 15px; font-weight: bold;">01</div>
-                    <h3 style="color: #4a2c12; font-size: 1.5rem; margin-bottom: 15px;">Accede Inmediatamente</h3>
-                    <p style="line-height: 1.6; color: #666;">
-                        Accede al ebook en segundos desde cualquier dispositivo. Podrás empezar a disfrutar de las recetas de inmediato.
-                    </p>
-                </div>
-                
-                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: #8b5a2b;"></div>
-                    <div style="font-size: 3rem; color: #8b5a2b; margin-bottom: 15px; font-weight: bold;">02</div>
-                    <h3 style="color: #4a2c12; font-size: 1.5rem; margin-bottom: 15px;">Prepara y Sorprende</h3>
-                    <p style="line-height: 1.6; color: #666;">
-                        Sigue nuestras recetas paso a paso y sorprende a todos con postres que parecen salidos de una pastelería de lujo.
-                    </p>
-                </div>
-                
-                <div style="background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden;">
-                    <div style="position: absolute; top: 0; left: 0; width: 5px; height: 100%; background: #8b5a2b;"></div>
-                    <div style="font-size: 3rem; color: #8b5a2b; margin-bottom: 15px; font-weight: bold;">03</div>
-                    <h3 style="color: #4a2c12; font-size: 1.5rem; margin-bottom: 15px;">Disfruta los Elogios</h3>
-                    <p style="line-height: 1.6; color: #666;">
-                        Recibe cumplidos por tus creaciones y disfruta viendo las caras de asombro de tus seres queridos.
-                    </p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 60px; padding: 40px; background: linear-gradient(135deg, #f5e6d8, #f0d9c0); border-radius: 10px; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 20px; right: 20px; font-size: 5rem; color: rgba(139, 90, 43, 0.1);">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h2 style="color: #4a2c12; font-size: 1.8rem; margin-bottom: 20px; position: relative;">
-                    Garantía de Satisfacción del 100%
-                </h2>
-                <p style="max-width: 700px; margin: 0 auto 25px; line-height: 1.6; font-size: 1.1rem; position: relative;">
-                    Estamos tan seguros de que amarás este ebook que te ofrecemos una garantía de 7 días. Si por alguna razón no quedas completamente satisfecho, te devolvemos tu dinero sin hacer preguntas.
-                </p>
-                <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="cta-button" style="font-size: 1.2rem; padding: 15px 40px; position: relative;">
-                    QUIERO TRANSFORMAR MIS POSTRES HOY
-                </a>
-                <p style="margin-top: 15px; font-size: 0.9rem; color: #8b5a2b; position: relative;">
-                    <i class="fas fa-lock"></i> Pago 100% seguro | Acceso inmediato | Soporte 24/7
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Order Bump Section -->
+    
+    <!-- Bonuses -->
     <section class="section" style="background: #fff9f0;">
         <div class="container">
-            <div style="max-width: 900px; margin: 0 auto; border: 2px solid #d4af37; border-radius: 10px; overflow: hidden;">
-                <div style="background: #d4af37; padding: 15px; text-align: center;">
-                    <h3 style="margin: 0; color: white; font-size: 1.3rem;">¡Oferta Especial Solo para Hoy!</h3>
-                </div>
-                <div style="display: flex; flex-wrap: wrap;">
-                    <div style="flex: 1; min-width: 300px; padding: 30px;">
-                        <img src="Imagenes/order bumps.png" alt="Ebook de empaque premium" style="width: 100%; border-radius: 5px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 class="section-title" style="color: #28a745; text-transform: uppercase;">BONOS DE REGALO INCLUIDOS</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem;">
+                Al adquirir hoy, recibirás estos increíbles bonos completamente <strong>GRATIS</strong>:
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 40px; align-items: center;">
+                <!-- Bono 1 -->
+                <!-- Bono 1 -->
+                <div class="book-3d" style="perspective: 2000px; margin: 0 auto; max-width: 300px;">
+                    <div class="book-cover" style="transform-style: preserve-3d; transform: rotateY(-20deg); transition: all 0.5s ease; position: relative; width: 100%; height: 400px;">
+                        <div style="position: absolute; width: 100%; height: 100%; background: #f5f5f5; box-shadow: 5px 5px 15px rgba(0,0,0,0.2); transform-style: preserve-3d; transition: all 0.5s ease;">
+                            <div style="position: absolute; width: 100%; height: 100%; background: #fff; transform: translateZ(10px); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                <div style="position: relative; width: 100%; height: 100%;">
+                                    <img src="Imagenes/bono 1.png" alt="Bono 1 - Cómo Conservar Chocolate" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(123, 63, 0, 0.8), rgba(92, 48, 0, 0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; font-family: 'Arial Black', sans-serif; text-align: center; padding: 20px;">
+                                <div style="font-size: 1.8rem; font-weight: 900; text-transform: uppercase; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 10px;">Bono Gratis</div>
+                                <div style="font-size: 2.2rem; font-weight: 900; color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); line-height: 1.1;">Cómo Conservar Chocolate</div>
+                                <div style="margin-top: 15px; font-size: 1.2rem; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">Guía Definitiva</div>
+                            </div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; width: 30px; height: 100%; background: #e0e0e0; right: -15px; transform: rotateY(90deg) translateX(15px);">
+                                <div style="position: absolute; width: 100%; height: 100%; background: linear-gradient(90deg, #d0d0d0, #e8e8e8);"></div>
+                            </div>
+                            <div style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.05); transform: translateZ(-1px);"></div>
+                        </div>
                     </div>
-                    <div style="flex: 1; min-width: 300px; padding: 30px; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="color: #4a2c12; font-size: 1.5rem; margin-top: 0;">
-                            Ebook Adicional: "El Arte del Empaque Premium"
-                        </h3>
-                        <p style="color: #8b5a2b; font-size: 1.2rem; font-weight: bold; margin: 10px 0 20px;">
-                            Solo $4.99 (Ahorras $5.00)
+                    <div style="padding: 10px 20px 20px; text-align: center;">
+                        <p style="color: #666; margin-bottom: 10px; font-size: 0.95rem;">
+                            Aprende las técnicas profesionales para mantener tus creaciones frescas por más tiempo.
                         </p>
-                        <p style="line-height: 1.6; margin-bottom: 20px;">
-                            Convierte tus postres caseros en regalos y productos de lujo con técnicas profesionales de empaque que harán que cualquiera esté dispuesto a pagar el doble.
+                        <p style="color: #28a745; font-weight: 700; font-size: 1.2rem; margin: 0;">
+                            <span style="text-decoration: line-through; color: #999; margin-right: 10px;">$19.99</span>
+                            <span style="color: #28a745; font-size: 1.3rem;">¡GRATIS!</span>
                         </p>
-                        <ul style="list-style: none; padding: 0; margin: 0 0 25px 0;">
-                            <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
-                                <i class="fas fa-check" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                                Técnicas probadas por profesionales
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
-                                <i class="fas fa-check" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                                Materiales accesibles y económicos
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
-                                <i class="fas fa-check" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                                Aumenta el valor percibido de tus postres
-                            </li>
-                            <li style="margin-bottom: 10px; padding-left: 30px; position: relative;">
-                                <i class="fas fa-check" style="color: #8b5a2b; position: absolute; left: 0; top: 5px;"></i>
-                                Ideal para regalos o para vender
-                            </li>
-                        </ul>
-                        <div style="text-align: center;">
-                            <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="cta-button" style="display: inline-block; margin-bottom: 15px; background: #8b5a2b; border: none;">
-                                SÍ, QUIERO AÑADIR ESTE EBOOK POR SOLO $4.99
-                            </a>
-                            <p style="font-size: 0.9rem; color: #666; margin: 0;">
-                                <i class="fas fa-lock"></i> Pago 100% seguro | Acceso inmediato
-                            </p>
+                    </div>
+                </div>
+
+                <!-- Bono 2 -->
+                <div class="book-3d" style="perspective: 2000px; margin: 0 auto; max-width: 300px;">
+                    <div class="book-cover" style="transform-style: preserve-3d; transform: rotateY(-20deg); transition: all 0.5s ease; position: relative; width: 100%; height: 400px;">
+                        <div style="position: absolute; width: 100%; height: 100%; background: #f5f5f5; box-shadow: 5px 5px 15px rgba(0,0,0,0.2); transform-style: preserve-3d; transition: all 0.5s ease;">
+                            <div style="position: absolute; width: 100%; height: 100%; background: #fff; transform: translateZ(10px); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                                <div style="position: relative; width: 100%; height: 100%;">
+                                    <img src="Imagenes/Bono 2.png" alt="Bono 2 - Postres Sin Horno" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(123, 63, 0, 0.8), rgba(92, 48, 0, 0.9)); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; font-family: 'Arial Black', sans-serif; text-align: center; padding: 20px;">
+                                <div style="font-size: 1.8rem; font-weight: 900; text-transform: uppercase; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-bottom: 10px;">Bono Gratis</div>
+                                <div style="font-size: 2.2rem; font-weight: 900; color: #FFD700; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); line-height: 1.1;">Postres Sin Horno</div>
+                                <div style="margin-top: 15px; font-size: 1.2rem; font-weight: 600; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">15 Recetas Exclusivas</div>
+                            </div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; width: 30px; height: 100%; background: #e0e0e0; right: -15px; transform: rotateY(90deg) translateX(15px);">
+                                <div style="position: absolute; width: 100%; height: 100%; background: linear-gradient(90deg, #d0d0d0, #e8e8e8);"></div>
+                            </div>
+                            <div style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.05); transform: translateZ(-1px);"></div>
+                        </div>
+                    </div>
+                    <div style="padding: 10px 20px 20px; text-align: center;">
+                        <p style="color: #666; margin-bottom: 10px; font-size: 0.95rem;">
+                            15 recetas adicionales que no requieren horno, perfectas para cualquier ocasión.
+                        </p>
+                        <p style="color: #28a745; font-weight: 700; font-size: 1.2rem; margin: 0;">
+                            <span style="text-decoration: line-through; color: #999; margin-right: 10px;">$24.99</span>
+                            <span style="color: #28a745; font-size: 1.3rem;">¡GRATIS!</span>
+                        </p>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                .book-3d {
+                    transition: transform 0.3s ease;
+                }
+                
+                .book-3d:hover {
+                    transform: translateY(-10px);
+                }
+                
+                .book-3d .book-cover:hover {
+                    transform: rotateY(-10deg) translateY(-10px);
+                }
+                
+                @media (max-width: 768px) {
+                    .book-3d {
+                        margin: 0 auto 40px !important;
+                    }
+                    
+                    .book-cover {
+                        transform: rotateY(-10deg) !important;
+                    }
+                }
+            </style>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Las recetas son increíblemente fáciles de seguir y los resultados son espectaculares. Mi familia no puede creer que yo haya hecho estos postres. ¡Valió cada centavo!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Cliente satisfecho">
+                        <div>
+                            <h4>María G.</h4>
+                            <div style="color: #ffd700;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Empecé mi negocio de postres con estas recetas y en solo 2 meses ya he recuperado la inversión. Los clientes no pueden creer que sean caseros. ¡Gracias!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente satisfecho">
+                        <div>
+                            <h4>Carlos M.</h4>
+                            <div style="color: #ffd700;">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    <!-- Final CTA Section -->
-    <section class="section" style="background: linear-gradient(135deg, #4a2c12, #2c1b0b); color: white; text-align: center; padding: 80px 0;">
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="section" style="background: linear-gradient(135deg, #4a2c12, #2c1b0b); color: white;">
         <div class="container">
-            <h2 style="color: #ffff00; font-size: 2.2rem; margin-bottom: 20px; text-shadow: 1px 1px 3px rgba(0,0,0,0.7);">
-                ¿Estás Listo para Transformar tu Experiencia con el Chocolate?
-            </h2>
-            <p style="font-size: 1.3rem; max-width: 800px; margin: 0 auto 30px; line-height: 1.6;">
-                Imagina poder preparar postres que dejen a todos con la boca abierta, recibir elogios por tus creaciones y disfrutar de momentos inolvidables alrededor del chocolate.
-            </p>
-            <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px; line-height: 1.6; opacity: 0.9;">
-                No dejes que esta oportunidad pase de largo. El precio especial está disponible solo por tiempo limitado y los bonos gratuitos son exclusivos para las primeras compras.
-            </p>
-            
-            <div style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.1); border-radius: 10px; padding: 30px; backdrop-filter: blur(5px);">
-                <h3 style="font-size: 1.8rem; margin-top: 0; margin-bottom: 20px; color: #d4af37;">
-                    Tu Paquetón Incluye:
-                </h3>
-                <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; text-align: left; max-width: 400px; margin: 0 auto 30px;">
-                    <li style="margin-bottom: 15px; padding-left: 35px; position: relative; font-size: 1.1rem;">
-                        <i class="fas fa-check-circle" style="color: #d4af37; position: absolute; left: 0; top: 5px; font-size: 1.3rem;"></i>
-                        <strong>Accede al Ebook:</strong> 33 Recetas Exclusivas con Chocolate Dubai
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 35px; position: relative; font-size: 1.1rem;">
-                        <i class="fas fa-check-circle" style="color: #d4af37; position: absolute; left: 0; top: 5px; font-size: 1.3rem;"></i>
-                        <strong>Bono 1:</strong> Guía de Conservación de Chocolate <span style="text-decoration: line-through; color: #999;">(Valor $9.99)</span> <span style="color: #00cc00; font-weight: bold;">HOY GRATIS</span>
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 35px; position: relative; font-size: 1.1rem;">
-                        <i class="fas fa-check-circle" style="color: #d4af37; position: absolute; left: 0; top: 5px; font-size: 1.3rem;"></i>
-                        <strong>Bono 2:</strong> Recetario de Postres Sin Horno <span style="text-decoration: line-through; color: #999;">(Valor $9.99)</span> <span style="color: #00cc00; font-weight: bold;">HOY GRATIS</span>
-                    </li>
-                    <li style="margin-bottom: 15px; padding-left: 35px; position: relative; font-size: 1.1rem;">
-                        <i class="fas fa-check-circle" style="color: #d4af37; position: absolute; left: 0; top: 5px; font-size: 1.3rem;"></i>
-                        <strong>Total Valor:</strong> $39.97
-                    </li>
-                    <li style="margin: 25px 0; padding-left: 35px; position: relative; font-size: 1.3rem; font-weight: bold; color: #d4af37;">
-                        <i class="fas fa-tag" style="position: absolute; left: 0; top: 5px; font-size: 1.5rem;"></i>
-                        ¡Hoy solo pagas $7.99!
-                    </li>
-                </ul>
+            <div class="price-box" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                <h2 style="margin-top: 0; color: white;">Resumen de tu Compra</h2>
                 
-                <div style="margin: 40px 0 20px;">
-                    <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="cta-button" style="display: inline-block; background: #d4af37; color: #4a2c12; font-size: 1.3rem; padding: 18px 50px; font-weight: bold; border: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+                <div style="text-align: left; max-width: 400px; margin: 0 auto 30px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <span>33 Recetas de Chocolate Dubai</span>
+                        <span style="font-weight: 600;">$7.99</span>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <div>
+                            <div>Bono #1: Conservación de Chocolate</div>
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">
+                                <s>Valor: $19.99</s> <span style="color: #4caf50; font-weight: 600;">GRATIS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <div>
+                            <div>Bono #2: Postres Sin Horno</div>
+                            <div style="font-size: 0.85rem; color: rgba(255,255,255,0.7);">
+                                <s>Valor: $24.99</s> <span style="color: #4caf50; font-weight: 600;">GRATIS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; margin: 20px 0 15px; text-align: center;">
+                        <div style="font-weight: 600; color: #4caf50;">¡AHORRAS $44.98 EN BONOS!</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Valor total de los bonos incluidos</div>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; margin-top: 20px; padding-top: 15px; border-top: 1px dashed rgba(255,255,255,0.2);">
+                        <span style="font-size: 1.5rem; font-weight: 700;">Total a pagar:</span>
+                        <span style="font-size: 1.8rem; font-weight: 800; color: #4caf50;">$7.99 <span style="font-size: 1.2rem;">USD</span></span>
+                    </div>
+                </div>
+                
+                <div style="margin: 20px 0; text-align: center;">
+                    <img src="Imagenes/ebook princial 2.jpeg" alt="Más recetas del ebook" style="max-width: 100%; border-radius: 10px; margin: 0 auto 20px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.2); max-width: 400px;">
+                    <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="btn" style="background: var(--secondary); color: #000 !important; font-weight: 700; font-size: 1.2rem; padding: 15px 40px; margin: 20px 0; display: inline-block;">
                         QUIERO MI ACCESO INMEDIATO
                     </a>
-                    <p style="margin: 15px 0 0; font-size: 0.9rem; opacity: 0.8;">
-                        <i class="fas fa-lock"></i> Pago 100% seguro | Acceso inmediato | Garantía de 7 días
-                    </p>
                 </div>
                 
-                <div style="margin-top: 30px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-                    <h4 style="color: #d4af37; font-size: 1.2rem; margin-bottom: 15px;">
-                        Preguntas Frecuentes
-                    </h4>
-                    <div style="text-align: left; max-width: 600px; margin: 0 auto;">
-                        <div style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
-                            <p style="font-weight: bold; margin-bottom: 5px;">¿Cómo recibiré mi compra?</p>
-                            <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Recibirás un correo electrónico con los enlaces de descarga inmediatamente después de confirmarse tu pago.</p>
-                        </div>
-                        <div style="margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px;">
-                            <p style="font-weight: bold; margin-bottom: 5px;">¿Qué métodos de pago aceptan?</p>
-                            <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Aceptamos todas las tarjetas de crédito y débito, PayPal y otros métodos de pago locales.</p>
-                        </div>
-                        <div>
-                            <p style="font-weight: bold; margin-bottom: 5px;">¿Qué pasa si no estoy satisfecho?</p>
-                            <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Ofrecemos una garantía de satisfacción de 7 días. Si no estás contento con tu compra, te devolvemos tu dinero.</p>
-                        </div>
+                <div class="guarantee">
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: #4a90e2; margin-bottom: 10px;"></i>
+                    <h3 style="margin: 0 0 10px 0; color: #4a90e2;">Garantía de Satisfacción</h3>
+                    <p style="margin: 0;">Si por alguna razón no quedas satisfecho, te devolvemos tu dinero en un plazo de 7 días. Sin preguntas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo recibo acceso a los ebooks?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Inmediatamente después de completar tu compra, recibirás un correo electrónico con instrucciones para acceder a tu área de miembros. No hay descargas necesarias, podrás acceder a todo el contenido en línea desde cualquier dispositivo.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué métodos de pago aceptan?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Aceptamos todas las tarjetas de crédito y débito principales, PayPal y otros métodos de pago locales a través de la plataforma segura de Hotmart.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Hay una garantía de devolución?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos una garantía de satisfacción de 7 días. Si por alguna razón no estás satisfecho con tu compra, simplemente envíanos un correo electrónico y te reembolsaremos tu dinero sin hacer preguntas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Necesito experiencia previa en repostería?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Para nada! Nuestras recetas están diseñadas para todos los niveles, desde principiantes hasta reposteros experimentados. Incluimos instrucciones detalladas y consejos para asegurar tu éxito.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Puedo usar estas recetas para mi negocio?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>¡Absolutamente! Muchos de nuestros estudiantes han comenzado exitosos negocios de repostería usando estas recetas. Incluso incluimos consejos sobre cómo presentar y vender tus creaciones.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="section" style="background-color: #f8f9fa; padding: 60px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">¿Listo para Transformar tu Repostería?</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px;">
+                No dejes pasar esta oportunidad de acceder a estas recetas exclusivas por solo $7.99. Recuerda que también incluye dos bonos GRATIS por tiempo limitado.
+            </p>
             
-            <p style="margin-top: 50px; font-size: 0.9rem; opacity: 0.7;">
-                2025 Chocolate Dubai - Todos los derechos reservados | 
-                <a href="#" style="color: #d4af37; text-decoration: none;">Términos y Condiciones</a> | 
-                <a href="#" style="color: #d4af37; text-decoration: none;">Política de Privacidad</a>
+            <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="btn" style="font-size: 1.2rem; padding: 15px 50px;">
+                QUIERO ACCEDER AHORA
+            </a>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
+                <i class="fas fa-lock"></i> Pago 100% seguro | Acceso inmediato | Garantía de 7 días
             </p>
         </div>
     </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"¡Increíble! Las recetas son fáciles de seguir y los resultados son espectaculares. Mi familia está encantada con los postres."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4>Ana M.</h4>
-                                <p>Ciudad de México</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"El mejor dinero que he invertido. Las técnicas de empaque han hecho que mis postres parezcan de pastelería de lujo."</p>
-                        <div class="testimonial-author">
-                            <div class="testimonial-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4>Carlos R.</h4>
-                                <p>Bogotá, Colombia</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>¡No pierdas esta oportunidad única!</h2>
-            <p>Por solo <strong>$7.99</strong> obtienes el ebook completo más los bonos de regalo.</p>
-            <div class="highlight-container">
-                <p class="highlight">¡Solo hoy! Precio especial de lanzamiento.</p>
-            </div>
-            <a href="https://pay.hotmart.com/Y103203006C?checkoutMode=10" class="cta-button">ACCEDER AHORA</a>
-            <div class="ebook-previews">
-                <img src="Imagenes/ebook princial 1.jpeg" alt="Vista previa del ebook 1" class="ebook-preview">
-                <img src="Imagenes/ebook princial 2.jpeg" alt="Vista previa del ebook 2" class="ebook-preview">
-            </div>
-            <div class="payment-methods">
-                <p>Aceptamos todas las tarjetas de crédito y débito</p>
-                <div class="payment-icons">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-amex"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
-    <footer class="footer">
+    <footer style="background-color: #2c1b0b; color: white; padding: 30px 0; text-align: center;">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>33 Recetas de Chocolate Dubai</h3>
-                    <p>Delicias exclusivas para los amantes del chocolate</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#">Términos de Servicio</a>
-                    <a href="#">Política de Privacidad</a>
-                    <a href="#">Contacto</a>
-                </div>
-                <div class="footer-legal">
-                    <p>2025 Chocolate Dubai. Todos los derechos reservados.</p>
-                    <p>Este sitio no está afiliado a Facebook ni a ninguna entidad de Facebook.</p>
-                </div>
+            <p style="margin: 0 0 20px 0;">
+                © 2025 Chocolate Dubai - Todos los derechos reservados
+            </p>
+            <div style="font-size: 0.9rem; opacity: 0.7;">
+                <a href="#" style="color: #d4af37; text-decoration: none; margin: 0 10px;">Términos y Condiciones</a> | 
+                <a href="#" style="color: #d4af37; text-decoration: none; margin: 0 10px;">Política de Privacidad</a> | 
+                <a href="#" style="color: #d4af37; text-decoration: none; margin: 0 10px;">Contacto</a>
             </div>
+            <p style="font-size: 0.8rem; opacity: 0.5; margin: 20px 0 0 0;">
+                Este sitio no está afiliado a Facebook ni a Facebook Inc. Una vez que dejas Facebook, no está bajo su política de privacidad o términos de servicio. 
+            </p>
+            <p style="font-size: 0.8rem; opacity: 0.5; margin: 5px 0 0 0;">
+                Los resultados pueden variar según el esfuerzo y dedicación de cada persona.
+            </p>
         </div>
     </footer>
-
-    <!-- Notification Popup -->
-    <div class="notification-popup" id="notification">
-        <div class="notification-content">
-            <i class="fas fa-bell"></i>
-            <p id="notification-text">María desde México acaba de acceder al ebook</p>
-        </div>
+    
+    <!-- Notification -->
+    <div class="notification" id="purchase-notification">
+        <span class="notification-close">&times;</span>
+        <p id="notification-text">¡María acaba de comprar el ebook desde Ciudad de México!</p>
     </div>
-
-    <!-- Scripts -->
-    <script src="js/script.js"></script>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999); // Set to end of day
+            
+            const diff = endOfDay - now;
+            
+            // Calculate hours, minutes, and seconds
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById("countdown").innerHTML = 
+                (hours < 10 ? "0" + hours : hours) + ":" + 
+                (minutes < 10 ? "0" + minutes : minutes) + ":" + 
+                (seconds < 10 ? "0" + seconds : seconds);
+                
+            // Change color to red when less than 1 hour remaining
+            if (hours < 1) {
+                document.getElementById("countdown").style.color = "#ff6b6b";
+            }
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Fake purchase notifications
+        const names = ["María", "Carlos", "Ana", "Juan", "Laura", "Pedro", "Sofía", "Diego", "Valentina", "Andrés"];
+        const cities = ["Ciudad de México", "Bogotá", "Buenos Aires", "Madrid", "Santiago", "Lima", "Medellín", "Barcelona", "Montevideo", "Quito"];
+        
+        function showRandomNotification() {
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomCity = cities[Math.floor(Math.random() * cities.length)];
+            
+            document.getElementById("notification-text").textContent = 
+                `¡${randomName} acaba de comprar el ebook desde ${randomCity}!`;
+                
+            const notification = document.getElementById("purchase-notification");
+            notification.classList.add("show");
+            
+            // Hide after 5 seconds
+            setTimeout(() => {
+                notification.classList.remove("show");
+            }, 5000);
+        }
+        
+        // Show first notification after 10 seconds
+        setTimeout(showRandomNotification, 10000);
+        
+        // Then show a new notification every 25-40 seconds
+        function scheduleNextNotification() {
+            const randomTime = Math.floor(Math.random() * 15000) + 10000; // 10-25 seconds
+            setTimeout(() => {
+                showRandomNotification();
+                scheduleNextNotification();
+            }, randomTime);
+        }
+        
+        scheduleNextNotification();
+        
+        // Close notification when X is clicked
+        document.querySelector(".notification-close").addEventListener("click", function() {
+            document.getElementById("purchase-notification").classList.remove("show");
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector("i");
+                
+                // Toggle answer
+                answer.classList.toggle("show");
+                
+                // Toggle icon
+                if (icon.classList.contains("fa-plus")) {
+                    icon.classList.remove("fa-plus");
+                    icon.classList.add("fa-minus");
+                } else {
+                    icon.classList.remove("fa-minus");
+                    icon.classList.add("fa-plus");
+                }
+                
+                // Close other answers
+                faqQuestions.forEach(item => {
+                    if (item !== question) {
+                        item.nextElementSibling.classList.remove("show");
+                        const itemIcon = item.querySelector("i");
+                        itemIcon.classList.remove("fa-minus");
+                        itemIcon.classList.add("fa-plus");
+                    }
+                });
+            });
+        });
+        
+        // Track button clicks
+        document.querySelectorAll("a[href^='https://pay.hotmart.com']").forEach(button => {
+            button.addEventListener("click", function() {
+                fbq('track', 'InitiateCheckout', {
+                    value: 7.99,
+                    currency: 'USD',
+                    content_name: '33 Recetas de Chocolate Dubai',
+                    content_type: 'product',
+                    content_ids: ['chocolate_dubai_ebook']
+                });
+            });
+        });
+    </script>
 </body>
 </html>
