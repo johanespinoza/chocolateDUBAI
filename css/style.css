@@ -1,9 +1,9 @@
 /* Base Styles */
 :root {
-    --primary-color: #8B4513; /* Chocolate brown */
-    --secondary-color: #D2691E; /* Chocolate orange */
-    --accent-color: #FFD700; /* Gold accent */
-    --text-color: #333333;
+    --primary: #8B4513; /* Chocolate brown */
+    --secondary: #D2691E; /* Chocolate orange */
+    --accent: #FFD700; /* Gold accent */
+    --text: #333333;
     --light-bg: #FFF8F0;
     --white: #FFFFFF;
     --dark-chocolate: #4B2C0C;
@@ -18,13 +18,19 @@
     box-sizing: border-box;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: var(--text-color);
+    color: var(--text);
     line-height: 1.6;
     background-color: var(--light-bg);
 }
@@ -39,12 +45,12 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--primary);
     transition: var(--transition);
 }
 
 a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary);
 }
 
 p {
@@ -80,12 +86,12 @@ img {
     transform: translateX(-50%);
     width: 100px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
     padding: 15px 40px;
     border-radius: 50px;
@@ -151,7 +157,7 @@ img {
 .current-price {
     font-size: 3rem;
     font-weight: 700;
-    color: var(--accent-color);
+    color: var(--accent);
 }
 
 .guarantee {
@@ -161,56 +167,9 @@ img {
 }
 
 .guarantee i {
-    margin-right: 5px;
-    color: var(--accent-color);
-}
-
-/* Countdown Section */
-.countdown-section {
-    background-color: var(--white);
-    padding: 2rem 0;
-    box-shadow: var(--shadow);
-}
-
-.countdown-box {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.countdown-box p {
+    color: var(--accent);
+    margin-right: 10px;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
-#countdown {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.countdown-item span:first-child {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--accent-color);
-    line-height: 1;
-}
-
-.countdown-item span:last-child {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Benefits Section */
@@ -261,7 +220,7 @@ img {
 
 .benefit-icon {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--primary);
     margin-bottom: 1.5rem;
 }
 
